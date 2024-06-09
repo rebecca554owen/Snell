@@ -8,7 +8,7 @@ PORT=${PORT:-2024}
 echo "要运行此镜像，请使用以下命令："
 echo "docker run -e PSK=<your_psk_here> -e PORT=<your_port_here> --restart unless-stopped -d rebecca554owen/snell:latest"
 echo "例如："
-echo "docker run -e PSK=your_psk -e PORT=2024 --restart unless-stopped -d snell-server:latest"
+echo "docker run -e PSK=your_psk -e PORT=2024 --restart unless-stopped -d rebecca554owen/snell:latest"
 
 # 下载 snell 二进制文件
 download_bin() {
