@@ -30,7 +30,7 @@ if [ -f ${CONF} ]; then
     echo "Found existing config..."
     download_bin
     run_bin
- else
+else
     if [ -z ${PSK} ]; then
         PSK=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 16)
         echo "Using generated PSK: ${PSK}"
@@ -41,6 +41,6 @@ if [ -f ${CONF} ]; then
     echo "[Snell Server]" >> ${CONF}
     echo "interface = 0.0.0.0" >> ${CONF}
     echo "port = 6160" >> ${CONF}
-    echo "psk = 3iR6KAPRyt3VT06" >> ${CONF}
+    echo "psk = ${PSK}" >> ${CONF}
     run_bin
 fi
